@@ -15,6 +15,9 @@ class Compilador{
 			CodeGen backend = new CodeGen();
 			String codigo = backend.geraCodigo(arv);
 			System.out.println(codigo);
+			ResultGen resultGen = new ResultGen();
+			Integer result = resultGen.geraResultado(arv);
+			System.out.println("Resultado: " + result);
 
 		}catch(Exception e)
 		{			
