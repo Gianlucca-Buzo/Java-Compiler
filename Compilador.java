@@ -6,7 +6,7 @@ class Compilador{
 	
 		try{
 
-			AnaliseLexica al = new AnaliseLexica(args[0]);
+			AnaliseLexica al = new AnaliseLexica("teste");
 			Parser as = new Parser(al);
 		
 			arv = as.parseProg();
@@ -17,7 +17,9 @@ class Compilador{
 			System.out.println(codigo);
 			ResultGen resultGen = new ResultGen();
 			Integer result = resultGen.geraResultado(arv);
-			System.out.println("Resultado: " + result);
+			System.out.println("Resultado ResultGen: " + result);
+			PileComputer pileComputer = new PileComputer(codigo);
+			System.out.println("Resultado PileComputer: "+ pileComputer.execute());
 
 		}catch(Exception e)
 		{			
