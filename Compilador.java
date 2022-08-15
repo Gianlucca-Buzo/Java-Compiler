@@ -6,7 +6,7 @@ class Compilador{
 	
 		try{
 
-			AnaliseLexica al = new AnaliseLexica("teste");
+			AnaliseLexica al = new AnaliseLexica(args[0]);
 			Parser as = new Parser(al);
 		
 			arv = as.parseProg();
