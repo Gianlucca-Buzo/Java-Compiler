@@ -39,7 +39,7 @@ public class PileComputer {
                 case "SUB":
                     first_value = values.pop();
                     second_value = values.pop();
-                    values.push(second_value/first_value);
+                    values.push(second_value-first_value);
                     break;
                 case "DIV":
                     first_value = values.pop();
